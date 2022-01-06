@@ -1,8 +1,9 @@
 import { Router } from "../deps.ts";
-import getMovies from "../handlers/movies.ts";
+import { randomMovies, searchMovies } from "../controllers/mod.ts";
 
 const router = new Router();
 
-router.get('/movies', getMovies);
+router.get('/movies', randomMovies);
+router.get('/search', searchMovies);
 
 export default router;

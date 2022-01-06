@@ -1,7 +1,7 @@
 import { Context } from "../deps.ts";
 import { movies } from "../db/mod.ts"
 
-const getMovies = (ctx: Context) => {
+export const randomMovies = (ctx: Context) => {
 
     const random = movies.aggregate([{$sample: {size: 5}}]);
 
@@ -11,5 +11,3 @@ const getMovies = (ctx: Context) => {
     }
 
 }
-
-export default getMovies;
