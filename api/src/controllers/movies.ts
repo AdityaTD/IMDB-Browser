@@ -1,9 +1,12 @@
 import { Context } from "../deps.ts";
 import { movies } from "../db/mod.ts"
 
-export const randomMovies = (ctx: Context) => {
+export const randomMovies = async (ctx: Context) => {
 
-    const random = movies.aggregate([{$sample: {size: 5}}]);
+    const random = await movies.find()
+                .limit(10)
+                .skip(Math.floor(Math.random() * await movies.countDocuments()))
+                .toArray();
 
     return ctx.response.body = {
         success: true,

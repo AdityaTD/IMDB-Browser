@@ -1,4 +1,3 @@
-
 import { Application } from "./deps.ts";
 import { PORT } from "../config.ts";
 import router from "./routes/mod.ts";
