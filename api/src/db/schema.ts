@@ -4,11 +4,12 @@ export interface MovieSchema {
     _id?: Bson.ObjectId;
     id: string;
     name: string;
+    year: string;
     genre: string;
+    poster: string;
     upvotes: number;
     downVotes: number;
-    releaseDate: Date;
-    reviews: ReviewSchema[];
+    reviews?: ReviewSchema[];
 }
 
 export interface ReviewSchema {
