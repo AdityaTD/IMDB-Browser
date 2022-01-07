@@ -1,8 +1,8 @@
 import { Middleware } from "../deps.ts";
 import type { Ratelimit } from "../types/index.d.ts";
 
-const RATELIMIT_TIME = 6000;
-const TOTAL_RATELIMIT = 10;
+const RATELIMIT_TIME = 1000;
+const TOTAL_RATELIMIT = 1000;
 
 const remainigRequests = new Map<string, Ratelimit>();
 

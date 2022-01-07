@@ -25,6 +25,6 @@ export const searchMovies = async (ctx: Context) => {
 
     await movies.insertMany(structured, { ordered: false }).catch(() => null)
 
-    return ctx.response.body = successBuilder(filtered);
+    return ctx.response.body = successBuilder(structured);
 
 }
