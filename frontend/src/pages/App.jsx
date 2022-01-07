@@ -52,6 +52,7 @@ function App() {
         </div>
       </div>
 
+      { sMovies.length < 1 && movies.length < 1 ? <div className="p-4 mx-16 text-lg text-center"><p>No Movies In The Database... Please Search Some!</p></div> : null }
       <div className="grid grid-cols-5 grid-flow-row gap-8 px-8 mx-16 mb-8">
         {sMovies.length > 0 ? (
           sMovies.map((movie) => (
