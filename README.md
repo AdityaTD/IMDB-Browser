@@ -19,5 +19,23 @@ API
 - MongoDB (Database)
 - TypeScript (Code)
 
+FRONTEND
+- React (JavaScript Library)
+- React Router (Routing)
+- TailwindCSS (CSS Framework)
+- Axios (HTTP Client)
+
+## Documentation
+API Endpoints
+- `/movies` : Fetches all the movies from the database.
+- `/movies/:id` : Fetches a specific movie from the database.
+- `/movies/:id/upvote` : Upvotes a specific movie.
+- `/movies/:id/downvote` : Downvotes a specific movie.
+- `/search?name=:name?genre=:genre` : Searches for a movie by name from IMDB then saves it in the database and filter by genre (optinal).
+
+Frontend Pages
+- `/` : Homepage.
+- `/movie/:id` : Page that gives more information about a movie.
+
 ## License
 UNLICENSED
